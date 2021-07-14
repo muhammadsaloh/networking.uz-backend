@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "start": "pm2 start ./src/server.js --name networking",
+    "stop": "pm2 stop networking",
+    "restart": "pm2 restart networking",
+    "uninstall": "pm2 delete networking"
   },
   "repository": {
     "type": "git",
@@ -26,6 +30,7 @@
     "joi": "^17.4.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "pg": "^8.6.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.6.5"
   }
